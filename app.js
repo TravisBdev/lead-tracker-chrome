@@ -15,5 +15,4 @@ function saveLead() {
   }
   leadsList.innerHTML = listItems;
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
-  console.log(localStorage.getItem("myLeads"));
 }
