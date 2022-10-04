@@ -8,8 +8,10 @@ saveBtn.addEventListener("click", saveLead);
 function saveLead() {
   myLeads.push(inputEl.value);
   inputEl.value = "";
-  for (const lead of myLeads) {
-    let newLead = `<li>${lead}</li>`;
-    leadsList.innerHTML += newLead;
+  let listItems = "";
+  for (let lead of myLeads) {
+    let newLead = `<li><a target = '_blank' href='${lead}'>${lead}</a></li>`;
+    listItems += newLead;
   }
+  leadsList.innerHTML = listItems;
 }
