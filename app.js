@@ -3,6 +3,13 @@ const inputEl = document.querySelector("#input-el");
 const saveBtn = document.querySelector("#input-btn");
 const leadsList = document.querySelector("#leads-list");
 
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+
+if (leadsFromLocalStorage) {
+  myLeads = leadsFromLocalStorage;
+  saveLead();
+}
+
 saveBtn.addEventListener("click", saveLead);
 
 function saveLead() {
